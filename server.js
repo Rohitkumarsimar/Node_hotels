@@ -4,6 +4,8 @@ import menu from './Models/menu.js'
 import menuRouter from './routes/menuRoutes.js'
 import personRouter from './routes/personRoutes.js'
 import bodyParser from 'body-parser'
+import 'dotenv/config';
+const PORT = process.env.PORT || 3000
 const app = express()
 app.use(bodyParser.json()) // req.body
 
@@ -13,4 +15,5 @@ app.get('/', (req, res) => {
 
 app.use('/person',personRouter);
 app.use('/menu',menuRouter)
-app.listen(3000, ()=>{console.log("Listening on port 3000")})
+
+app.listen(PORT, ()=>{console.log("Listening on port 3000")})

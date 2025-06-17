@@ -10,7 +10,7 @@ price: {
  },
  taste: {
  type: String,
- enum: ['Sweet', 'Spicy', 'Sour'],
+ enum: ['sweet', 'spicy', 'sour'],
  },
  is_drink: {
  type: Boolean,
