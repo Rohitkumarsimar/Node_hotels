@@ -1,0 +1,38 @@
+import express from 'express'
+import mongoose from './db.js'
+import Person from './person.js'
+import bodyParser from 'body-parser'
+const app = express()
+app.use(bodyParser.json()) // req.body
+
+
+app.get('/', (req, res) => {
+  res.send('Hi, welcome to our hotel.')
+})
+app.post('/person',(req,res)=>{
+// const data  = req.body // Assuming the request body contains the person's data
+
+// // Create new person document using mongoose model.
+// const newPerson = Person(data)
+
+
+// // newPerson.name = data.name
+// // newPerson.age = data.age
+// // newPerson.work = data.work
+// // newPerson.mobile = data.mobile
+// // newPerson.email = data.email
+// // newPerson.salary = data.salary
+// // newPerson.address = data.address
+// // To avoid this redundancy we will pass data in person
+
+// newPerson.save((error,person)=>{
+//   if(error){
+//     console.log('Error saving person: ',error)
+//     res.status(500).json({error: 'Internal server error'})
+//   }else{
+//     console.log("Data stored successfully")
+//     res.status(200).json(person)
+//   }
+// })
+})
+app.listen(3000, ()=>{console.log("Listening on port 3000")})
