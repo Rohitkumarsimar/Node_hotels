@@ -2,8 +2,8 @@ import mongoose from 'mongoose';
 import 'dotenv/config';
 
 
-// const uri = process.env.DB_URL_LOCAL; // Change as needed
-const uri = process.env.DB_URL
+const uri = process.env.DB_URL_LOCAL; // Change as needed
+// const uri = process.env.DB_URL
 mongoose.connection.on('connected', () => {
   console.log('MongoDB connection established successfully!');
 });
