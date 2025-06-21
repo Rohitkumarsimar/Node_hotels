@@ -30,7 +30,7 @@ app.get('/',(req, res) => {
   res.send('Hi, welcome to our hotel.')
 })
 
-app.use('/person',localAuthMiddleware,personRouter);
+app.use('/person',personRouter);
 app.use('/menu',menuRouter)
 
 app.listen(PORT, ()=>{console.log("Listening on port 3000")})
